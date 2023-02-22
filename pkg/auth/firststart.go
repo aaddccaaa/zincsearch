@@ -39,9 +39,10 @@ func init() {
 }
 
 func isFirstStart() (bool, error) {
+	return false, nil
 	users, err := GetUsers()
 	if err != nil {
-		return true, err
+		return false, err
 	}
 
 	if len(users) == 0 {
