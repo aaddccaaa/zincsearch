@@ -1,6 +1,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/zinclabs/zincsearch)](https://goreportcard.com/report/github.com/zinclabs/zincsearch)
 [![Docs](https://img.shields.io/badge/Docs-Docs-green)](https://docs.zinc.dev/) [![codecov](https://codecov.io/github/zinclabs/zincsearch/branch/main/graph/badge.svg)](https://codecov.io/github/zinclabs/zincsearch)
 
+❗Note: If your use case is of log search (app and security logs) instead of app search (implement search feature in your application or website) then you should check [zinclabs/zincobserve](https://github.com/zinclabs/zincobserve) project that is specifically built for observability use case.
 # ZincSearch
 
 ZincSearch is a search engine that does full text indexing. It is a lightweight alternative to Elasticsearch and runs using a fraction of the resources. It uses [bluge](https://github.com/blugelabs/bluge) as the underlying indexing library.
@@ -37,7 +38,7 @@ Note: Do not store sensitive data on this server as its available to everyone on
 4. Compatibility with Elasticsearch APIs for ingestion of data (single record and bulk API)
 5. Out of the box authentication
 6. Schema less - No need to define schema upfront and different documents in the same index can have different fields.
-7. Index storage in disk (default), s3 or minio (experimental)
+7. Index storage in disk (default), s3 or minio (deprecated)
 8. aggregation support
 
 # How to get support
@@ -80,7 +81,7 @@ ZincSearch currently has most of its API contracts frozen. It's data format may 
 | Preferred Use case  | App search | Log / event search |
 | Max  data supported | 100s of GBs | Petabyte scale |
 | High availability   | Will be available soon | Yes |
-| Open source         | Yes | Willl soon be available |
+| Open source         | Yes | Yes, [ZincObserve](https://github.com/zinclabs/zincobserve)  |
 | ES API compatibility| Search and Ingestion | Ingestion only | 
 | GUI                 | Basic     | Advanced for log search |
 | Cost                | Free (self hosting may cost money based on size)| Generous free tier. 1 TB ingest / month free.| 
@@ -98,4 +99,4 @@ ZincSearch currently has most of its API contracts frozen. It's data format may 
 
 - Join our weChat Group
 
-  <img src="https://zinc-public-data.s3.us-west-2.amazonaws.com/zincsearch/wechat_group_cn.jpg" width="300">
+  <img src="https://zinc-public-data.s3.us-west-2.amazonaws.com/zincsearch/wechat_group_cn-20230228.jpg" width="300">
